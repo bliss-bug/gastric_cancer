@@ -1,0 +1,2 @@
+nohup python sam_train.py --device='cuda:0' --device_ids 0 1 --epochs=40 --batch_size=64 --lr=5e-5 &
+python sam_train.py --device='cuda:0' --device_ids 0 1 --epochs=40 --batch_size=64 --lr=5e-5

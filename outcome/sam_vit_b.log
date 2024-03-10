@@ -1,0 +1,520 @@
+-------3分类-------
+img_size=512, no prompt, only fine-tune mask_decoder
+train 1: loss: 0.698
+val 1: mIoU: 0.462, DSC: 0.541
+train 2: loss: 0.630
+val 2: mIoU: 0.477, DSC: 0.567
+train 3: loss: 0.615
+val 3: mIoU: 0.483, DSC: 0.574
+train 4: loss: 0.604
+val 4: mIoU: 0.492, DSC: 0.596
+train 5: loss: 0.594
+val 5: mIoU: 0.490, DSC: 0.597
+train 6: loss: 0.585
+val 6: mIoU: 0.517, DSC: 0.630
+train 7: loss: 0.576
+val 7: mIoU: 0.509, DSC: 0.611
+train 8: loss: 0.568
+val 8: mIoU: 0.512, DSC: 0.620
+train 9: loss: 0.560
+val 9: mIoU: 0.510, DSC: 0.613
+train 10: loss: 0.550
+val 10: mIoU: 0.509, DSC: 0.610
+train 11: loss: 0.541
+val 11: mIoU: 0.513, DSC: 0.621
+train 12: loss: 0.535
+val 12: mIoU: 0.515, DSC: 0.624
+train 13: loss: 0.519
+val 13: mIoU: 0.505, DSC: 0.598
+train 14: loss: 0.517
+val 14: mIoU: 0.523, DSC: 0.635
+train 15: loss: 0.504
+val 15: mIoU: 0.515, DSC: 0.617
+train 16: loss: 0.491
+val 16: mIoU: 0.524, DSC: 0.635
+train 17: loss: 0.480
+val 17: mIoU: 0.518, DSC: 0.623
+train 18: loss: 0.477
+val 18: mIoU: 0.521, DSC: 0.632
+train 19: loss: 0.464
+val 19: mIoU: 0.531, DSC: 0.640
+train 20: loss: 0.448
+val 20: mIoU: 0.512, DSC: 0.613
+train 21: loss: 0.437
+val 21: mIoU: 0.530, DSC: 0.645
+train 22: loss: 0.424
+val 22: mIoU: 0.528, DSC: 0.638
+train 23: loss: 0.410
+val 23: mIoU: 0.538, DSC: 0.654
+train 24: loss: 0.407
+val 24: mIoU: 0.536, DSC: 0.652
+train 25: loss: 0.394
+val 25: mIoU: 0.537, DSC: 0.652
+train 26: loss: 0.375
+val 26: mIoU: 0.530, DSC: 0.641
+train 27: loss: 0.370
+val 27: mIoU: 0.533, DSC: 0.648
+train 28: loss: 0.365
+val 28: mIoU: 0.524, DSC: 0.635
+train 29: loss: 0.352
+val 29: mIoU: 0.536, DSC: 0.651
+train 30: loss: 0.350
+val 30: mIoU: 0.540, DSC: 0.655
+train 31: loss: 0.331
+val 31: mIoU: 0.526, DSC: 0.641
+train 32: loss: 0.332
+val 32: mIoU: 0.526, DSC: 0.637
+train 33: loss: 0.321
+val 33: mIoU: 0.537, DSC: 0.648
+train 34: loss: 0.307
+val 34: mIoU: 0.537, DSC: 0.653
+train 35: loss: 0.323
+val 35: mIoU: 0.530, DSC: 0.645
+train 36: loss: 0.309
+val 36: mIoU: 0.537, DSC: 0.650
+train 37: loss: 0.301
+val 37: mIoU: 0.537, DSC: 0.652
+train 38: loss: 0.297
+val 38: mIoU: 0.529, DSC: 0.643
+train 39: loss: 0.305
+val 39: mIoU: 0.533, DSC: 0.644
+train 40: loss: 0.283
+val 40: mIoU: 0.534, DSC: 0.649
+test: mIoU: 0.541, DSC: 0.660
+
+img_size=512, prompt=ground truth box, only fine-tune mask_decoder
+train 1: loss: 0.621
+val 1: mIoU: 0.565, DSC: 0.632
+train 2: loss: 0.518
+val 2: mIoU: 0.590, DSC: 0.674
+train 3: loss: 0.500
+val 3: mIoU: 0.581, DSC: 0.651
+train 4: loss: 0.489
+val 4: mIoU: 0.616, DSC: 0.713
+train 5: loss: 0.483
+val 5: mIoU: 0.622, DSC: 0.717
+train 6: loss: 0.472
+val 6: mIoU: 0.620, DSC: 0.714
+train 7: loss: 0.466
+val 7: mIoU: 0.620, DSC: 0.707
+train 8: loss: 0.455
+val 8: mIoU: 0.629, DSC: 0.731
+train 9: loss: 0.445
+val 9: mIoU: 0.629, DSC: 0.720
+train 10: loss: 0.439
+val 10: mIoU: 0.630, DSC: 0.728
+train 11: loss: 0.432
+val 11: mIoU: 0.613, DSC: 0.696
+train 12: loss: 0.417
+val 12: mIoU: 0.615, DSC: 0.699
+train 13: loss: 0.408
+val 13: mIoU: 0.642, DSC: 0.740
+train 14: loss: 0.399
+val 14: mIoU: 0.634, DSC: 0.732
+train 15: loss: 0.388
+val 15: mIoU: 0.627, DSC: 0.721
+train 16: loss: 0.371
+val 16: mIoU: 0.623, DSC: 0.725
+train 17: loss: 0.355
+val 17: mIoU: 0.631, DSC: 0.722
+train 18: loss: 0.341
+val 18: mIoU: 0.638, DSC: 0.739
+train 19: loss: 0.337
+val 19: mIoU: 0.637, DSC: 0.738
+train 20: loss: 0.318
+val 20: mIoU: 0.633, DSC: 0.736
+train 21: loss: 0.315
+val 21: mIoU: 0.636, DSC: 0.729
+train 22: loss: 0.299
+val 22: mIoU: 0.631, DSC: 0.726
+train 23: loss: 0.285
+val 23: mIoU: 0.637, DSC: 0.736
+train 24: loss: 0.270
+val 24: mIoU: 0.639, DSC: 0.734
+train 25: loss: 0.271
+val 25: mIoU: 0.629, DSC: 0.721
+train 26: loss: 0.257
+val 26: mIoU: 0.640, DSC: 0.735
+train 27: loss: 0.236
+val 27: mIoU: 0.617, DSC: 0.720
+train 28: loss: 0.240
+val 28: mIoU: 0.634, DSC: 0.736
+train 29: loss: 0.228
+val 29: mIoU: 0.643, DSC: 0.738
+train 30: loss: 0.220
+val 30: mIoU: 0.639, DSC: 0.741
+train 31: loss: 0.222
+val 31: mIoU: 0.629, DSC: 0.731
+train 32: loss: 0.212
+val 32: mIoU: 0.637, DSC: 0.732
+train 33: loss: 0.209
+val 33: mIoU: 0.637, DSC: 0.740
+train 34: loss: 0.205
+val 34: mIoU: 0.634, DSC: 0.727
+train 35: loss: 0.194
+val 35: mIoU: 0.631, DSC: 0.726
+train 36: loss: 0.191
+val 36: mIoU: 0.633, DSC: 0.729
+train 37: loss: 0.179
+val 37: mIoU: 0.637, DSC: 0.732
+train 38: loss: 0.185
+val 38: mIoU: 0.636, DSC: 0.730
+train 39: loss: 0.178
+val 39: mIoU: 0.625, DSC: 0.716
+train 40: loss: 0.187
+val 40: mIoU: 0.638, DSC: 0.738
+train 41: loss: 0.175
+val 41: mIoU: 0.634, DSC: 0.728
+train 42: loss: 0.170
+val 42: mIoU: 0.628, DSC: 0.728
+train 43: loss: 0.176
+val 43: mIoU: 0.641, DSC: 0.737
+train 44: loss: 0.174
+val 44: mIoU: 0.632, DSC: 0.727
+train 45: loss: 0.164
+val 45: mIoU: 0.628, DSC: 0.719
+train 46: loss: 0.162
+val 46: mIoU: 0.635, DSC: 0.728
+train 47: loss: 0.152
+val 47: mIoU: 0.641, DSC: 0.736
+train 48: loss: 0.163
+val 48: mIoU: 0.626, DSC: 0.718
+train 49: loss: 0.157
+val 49: mIoU: 0.640, DSC: 0.736
+train 50: loss: 0.162
+val 50: mIoU: 0.635, DSC: 0.734
+test: mIoU: 0.640, DSC: 0.738
+
+img_size=1024, prompt=ground truth box, only fine-tune mask_decoder
+train 1: loss: 0.559
+val 1: mIoU: 0.579, DSC: 0.646
+train 2: loss: 0.518
+val 2: mIoU: 0.590, DSC: 0.663
+train 3: loss: 0.506
+val 3: mIoU: 0.608, DSC: 0.695
+train 4: loss: 0.495
+val 4: mIoU: 0.595, DSC: 0.668
+train 5: loss: 0.486
+val 5: mIoU: 0.611, DSC: 0.697
+train 6: loss: 0.481
+val 6: mIoU: 0.618, DSC: 0.703
+train 7: loss: 0.473
+val 7: mIoU: 0.636, DSC: 0.728
+train 8: loss: 0.464
+val 8: mIoU: 0.629, DSC: 0.726
+train 9: loss: 0.457
+val 9: mIoU: 0.625, DSC: 0.712
+train 10: loss: 0.447
+val 10: mIoU: 0.612, DSC: 0.692
+train 11: loss: 0.436
+val 11: mIoU: 0.641, DSC: 0.735
+train 12: loss: 0.426
+val 12: mIoU: 0.635, DSC: 0.727
+train 13: loss: 0.414
+val 13: mIoU: 0.631, DSC: 0.720
+train 14: loss: 0.403
+val 14: mIoU: 0.639, DSC: 0.733
+train 15: loss: 0.391
+val 15: mIoU: 0.647, DSC: 0.742
+train 16: loss: 0.379
+val 16: mIoU: 0.644, DSC: 0.744
+train 17: loss: 0.365
+val 17: mIoU: 0.644, DSC: 0.746
+train 18: loss: 0.353
+val 18: mIoU: 0.643, DSC: 0.735
+train 19: loss: 0.346
+val 19: mIoU: 0.639, DSC: 0.735
+train 20: loss: 0.334
+val 20: mIoU: 0.648, DSC: 0.746
+train 21: loss: 0.322
+val 21: mIoU: 0.636, DSC: 0.740
+train 22: loss: 0.314
+val 22: mIoU: 0.643, DSC: 0.738
+train 23: loss: 0.302
+val 23: mIoU: 0.640, DSC: 0.741
+train 24: loss: 0.297
+val 24: mIoU: 0.652, DSC: 0.749
+train 25: loss: 0.286
+val 25: mIoU: 0.653, DSC: 0.749
+train 26: loss: 0.278
+val 26: mIoU: 0.658, DSC: 0.757
+train 27: loss: 0.270
+val 27: mIoU: 0.643, DSC: 0.742
+train 28: loss: 0.266
+val 28: mIoU: 0.654, DSC: 0.749
+train 29: loss: 0.260
+val 29: mIoU: 0.651, DSC: 0.747
+train 30: loss: 0.256
+val 30: mIoU: 0.661, DSC: 0.760
+train 31: loss: 0.247
+val 31: mIoU: 0.640, DSC: 0.732
+train 32: loss: 0.260
+val 32: mIoU: 0.641, DSC: 0.734
+train 33: loss: 0.250
+val 33: mIoU: 0.643, DSC: 0.742
+train 34: loss: 0.260
+val 34: mIoU: 0.647, DSC: 0.746
+train 35: loss: 0.257
+val 35: mIoU: 0.649, DSC: 0.748
+train 36: loss: 0.259
+val 36: mIoU: 0.651, DSC: 0.748
+train 37: loss: 0.257
+val 37: mIoU: 0.649, DSC: 0.746
+train 38: loss: 0.258
+val 38: mIoU: 0.640, DSC: 0.731
+train 39: loss: 0.243
+val 39: mIoU: 0.645, DSC: 0.748
+train 40: loss: 0.242
+val 40: mIoU: 0.643, DSC: 0.737
+train 41: loss: 0.239
+val 41: mIoU: 0.653, DSC: 0.750
+train 42: loss: 0.254
+val 42: mIoU: 0.636, DSC: 0.727
+train 43: loss: 0.245
+val 43: mIoU: 0.642, DSC: 0.738
+train 44: loss: 0.243
+val 44: mIoU: 0.653, DSC: 0.750
+train 45: loss: 0.238
+val 45: mIoU: 0.650, DSC: 0.751
+train 46: loss: 0.236
+val 46: mIoU: 0.641, DSC: 0.734
+train 47: loss: 0.230
+val 47: mIoU: 0.658, DSC: 0.758
+train 48: loss: 0.233
+val 48: mIoU: 0.651, DSC: 0.751
+train 49: loss: 0.237
+val 49: mIoU: 0.646, DSC: 0.748
+train 50: loss: 0.219
+val 50: mIoU: 0.641, DSC: 0.734
+test: mIoU: 0.656, DSC: 0.757
+
+-------2分类-------
+img_size=512, prompt=ground truth box, only fine-tune mask_decoder
+train 1: loss: 0.179
+val 1: mIoU: 0.914, DSC: 0.954
+train 2: loss: 0.156
+val 2: mIoU: 0.920, DSC: 0.958
+train 3: loss: 0.148
+val 3: mIoU: 0.921, DSC: 0.958
+train 4: loss: 0.150
+val 4: mIoU: 0.921, DSC: 0.958
+train 5: loss: 0.144
+val 5: mIoU: 0.918, DSC: 0.956
+train 6: loss: 0.142
+val 6: mIoU: 0.923, DSC: 0.959
+train 7: loss: 0.139
+val 7: mIoU: 0.923, DSC: 0.959
+train 8: loss: 0.137
+val 8: mIoU: 0.921, DSC: 0.958
+train 9: loss: 0.135
+val 9: mIoU: 0.920, DSC: 0.957
+train 10: loss: 0.133
+val 10: mIoU: 0.923, DSC: 0.959
+train 11: loss: 0.131
+val 11: mIoU: 0.922, DSC: 0.959
+train 12: loss: 0.136
+val 12: mIoU: 0.924, DSC: 0.960
+train 13: loss: 0.131
+val 13: mIoU: 0.924, DSC: 0.960
+train 14: loss: 0.129
+val 14: mIoU: 0.923, DSC: 0.959
+train 15: loss: 0.127
+val 15: mIoU: 0.924, DSC: 0.960
+train 16: loss: 0.125
+val 16: mIoU: 0.925, DSC: 0.960
+train 17: loss: 0.123
+val 17: mIoU: 0.923, DSC: 0.959
+train 18: loss: 0.122
+val 18: mIoU: 0.925, DSC: 0.960
+train 19: loss: 0.120
+val 19: mIoU: 0.923, DSC: 0.959
+train 20: loss: 0.119
+val 20: mIoU: 0.925, DSC: 0.960
+train 21: loss: 0.117
+val 21: mIoU: 0.923, DSC: 0.959
+train 22: loss: 0.115
+val 22: mIoU: 0.924, DSC: 0.960
+train 23: loss: 0.114
+val 23: mIoU: 0.922, DSC: 0.959
+train 24: loss: 0.113
+val 24: mIoU: 0.924, DSC: 0.960
+train 25: loss: 0.111
+val 25: mIoU: 0.921, DSC: 0.958
+train 26: loss: 0.110
+val 26: mIoU: 0.923, DSC: 0.959
+train 27: loss: 0.107
+val 27: mIoU: 0.923, DSC: 0.959
+train 28: loss: 0.105
+val 28: mIoU: 0.924, DSC: 0.960
+train 29: loss: 0.104
+val 29: mIoU: 0.923, DSC: 0.959
+train 30: loss: 0.103
+val 30: mIoU: 0.922, DSC: 0.959
+train 31: loss: 0.101
+val 31: mIoU: 0.923, DSC: 0.959
+train 32: loss: 0.099
+val 32: mIoU: 0.920, DSC: 0.958
+train 33: loss: 0.098
+val 33: mIoU: 0.920, DSC: 0.958
+train 34: loss: 0.096
+val 34: mIoU: 0.922, DSC: 0.959
+train 35: loss: 0.095
+val 35: mIoU: 0.923, DSC: 0.959
+train 36: loss: 0.093
+val 36: mIoU: 0.922, DSC: 0.959
+train 37: loss: 0.092
+val 37: mIoU: 0.921, DSC: 0.958
+train 38: loss: 0.090
+val 38: mIoU: 0.923, DSC: 0.959
+train 39: loss: 0.089
+val 39: mIoU: 0.920, DSC: 0.957
+train 40: loss: 0.088
+val 40: mIoU: 0.921, DSC: 0.958
+test: mIoU: 0.925, DSC: 0.960
+
+img_size=512, no prompt, only fine-tune mask_decoder
+train 1: loss: 0.584
+val 1: mIoU: 0.721, DSC: 0.829
+train 2: loss: 0.496
+val 2: mIoU: 0.750, DSC: 0.849
+train 3: loss: 0.477
+val 3: mIoU: 0.754, DSC: 0.852
+train 4: loss: 0.461
+val 4: mIoU: 0.752, DSC: 0.850
+train 5: loss: 0.453
+val 5: mIoU: 0.762, DSC: 0.858
+train 6: loss: 0.445
+val 6: mIoU: 0.766, DSC: 0.860
+train 7: loss: 0.435
+val 7: mIoU: 0.757, DSC: 0.854
+train 8: loss: 0.429
+val 8: mIoU: 0.764, DSC: 0.859
+train 9: loss: 0.425
+val 9: mIoU: 0.766, DSC: 0.861
+train 10: loss: 0.418
+val 10: mIoU: 0.773, DSC: 0.865
+train 11: loss: 0.411
+val 11: mIoU: 0.774, DSC: 0.866
+train 12: loss: 0.406
+val 12: mIoU: 0.766, DSC: 0.861
+train 13: loss: 0.401
+val 13: mIoU: 0.774, DSC: 0.866
+train 14: loss: 0.396
+val 14: mIoU: 0.773, DSC: 0.865
+train 15: loss: 0.390
+val 15: mIoU: 0.774, DSC: 0.866
+train 16: loss: 0.384
+val 16: mIoU: 0.773, DSC: 0.865
+train 17: loss: 0.376
+val 17: mIoU: 0.778, DSC: 0.869
+train 18: loss: 0.372
+val 18: mIoU: 0.778, DSC: 0.869
+train 19: loss: 0.365
+val 19: mIoU: 0.778, DSC: 0.868
+train 20: loss: 0.363
+val 20: mIoU: 0.780, DSC: 0.870
+train 21: loss: 0.352
+val 21: mIoU: 0.778, DSC: 0.869
+train 22: loss: 0.345
+val 22: mIoU: 0.777, DSC: 0.869
+train 23: loss: 0.339
+val 23: mIoU: 0.773, DSC: 0.865
+train 24: loss: 0.331
+val 24: mIoU: 0.781, DSC: 0.871
+train 25: loss: 0.325
+val 25: mIoU: 0.782, DSC: 0.872
+train 26: loss: 0.321
+val 26: mIoU: 0.782, DSC: 0.871
+train 27: loss: 0.310
+val 27: mIoU: 0.779, DSC: 0.869
+train 28: loss: 0.303
+val 28: mIoU: 0.779, DSC: 0.869
+train 29: loss: 0.297
+val 29: mIoU: 0.783, DSC: 0.872
+train 30: loss: 0.294
+val 30: mIoU: 0.777, DSC: 0.867
+test: mIoU: 0.777, DSC: 0.868
+
+img_size=512, prompt=ground truth box, only fine-tune mask_decoder
+train 1: loss: 0.178
+val 1: mIoU: 0.916, DSC: 0.955
+train 2: loss: 0.157
+val 2: mIoU: 0.919, DSC: 0.957
+train 3: loss: 0.148
+val 3: mIoU: 0.918, DSC: 0.957
+train 4: loss: 0.143
+val 4: mIoU: 0.922, DSC: 0.959
+train 5: loss: 0.140
+val 5: mIoU: 0.922, DSC: 0.959
+train 6: loss: 0.139
+val 6: mIoU: 0.923, DSC: 0.959
+train 7: loss: 0.136
+val 7: mIoU: 0.921, DSC: 0.958
+train 8: loss: 0.136
+val 8: mIoU: 0.925, DSC: 0.960
+train 9: loss: 0.133
+val 9: mIoU: 0.924, DSC: 0.960
+train 10: loss: 0.131
+val 10: mIoU: 0.924, DSC: 0.960
+train 11: loss: 0.129
+val 11: mIoU: 0.925, DSC: 0.960
+train 12: loss: 0.128
+val 12: mIoU: 0.924, DSC: 0.960
+train 13: loss: 0.127
+val 13: mIoU: 0.925, DSC: 0.960
+train 14: loss: 0.124
+val 14: mIoU: 0.925, DSC: 0.960
+train 15: loss: 0.123
+val 15: mIoU: 0.925, DSC: 0.960
+train 16: loss: 0.121
+val 16: mIoU: 0.925, DSC: 0.960
+train 17: loss: 0.119
+val 17: mIoU: 0.922, DSC: 0.959
+train 18: loss: 0.117
+val 18: mIoU: 0.925, DSC: 0.960
+train 19: loss: 0.116
+val 19: mIoU: 0.921, DSC: 0.958
+train 20: loss: 0.114
+val 20: mIoU: 0.924, DSC: 0.960
+train 21: loss: 0.112
+val 21: mIoU: 0.923, DSC: 0.959
+train 22: loss: 0.113
+val 22: mIoU: 0.918, DSC: 0.957
+train 23: loss: 0.125
+val 23: mIoU: 0.922, DSC: 0.959
+train 24: loss: 0.114
+val 24: mIoU: 0.924, DSC: 0.960
+train 25: loss: 0.108
+val 25: mIoU: 0.924, DSC: 0.960
+train 26: loss: 0.104
+val 26: mIoU: 0.923, DSC: 0.959
+train 27: loss: 0.103
+val 27: mIoU: 0.923, DSC: 0.959
+train 28: loss: 0.101
+val 28: mIoU: 0.923, DSC: 0.959
+train 29: loss: 0.100
+val 29: mIoU: 0.923, DSC: 0.959
+train 30: loss: 0.098
+val 30: mIoU: 0.923, DSC: 0.959
+train 31: loss: 0.096
+val 31: mIoU: 0.924, DSC: 0.960
+train 32: loss: 0.094
+val 32: mIoU: 0.923, DSC: 0.959
+train 33: loss: 0.092
+val 33: mIoU: 0.923, DSC: 0.959
+train 34: loss: 0.092
+val 34: mIoU: 0.922, DSC: 0.959
+train 35: loss: 0.088
+val 35: mIoU: 0.923, DSC: 0.959
+train 36: loss: 0.091
+val 36: mIoU: 0.923, DSC: 0.959
+train 37: loss: 0.088
+val 37: mIoU: 0.922, DSC: 0.959
+train 38: loss: 0.085
+val 38: mIoU: 0.922, DSC: 0.959
+train 39: loss: 0.086
+val 39: mIoU: 0.923, DSC: 0.959
+train 40: loss: 0.086
+val 40: mIoU: 0.919, DSC: 0.957
+test: mIoU: 0.925, DSC: 0.960
+

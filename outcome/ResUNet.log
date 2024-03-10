@@ -1,0 +1,179 @@
+val 1: mIoU: 0.681, DSC: 0.717, mIoU2: 0.479, DSC2: 0.561
+val 2: mIoU: 0.661, DSC: 0.695, mIoU2: 0.507, DSC2: 0.609
+val 3: mIoU: 0.665, DSC: 0.696, mIoU2: 0.488, DSC2: 0.598
+val 4: mIoU: 0.671, DSC: 0.705, mIoU2: 0.508, DSC2: 0.616
+val 5: mIoU: 0.724, DSC: 0.759, mIoU2: 0.521, DSC2: 0.621
+val 6: mIoU: 0.669, DSC: 0.704, mIoU2: 0.501, DSC2: 0.606
+val 7: mIoU: 0.678, DSC: 0.711, mIoU2: 0.504, DSC2: 0.615
+val 8: mIoU: 0.709, DSC: 0.741, mIoU2: 0.504, DSC2: 0.614
+val 9: mIoU: 0.766, DSC: 0.800, mIoU2: 0.485, DSC2: 0.549
+val 10: mIoU: 0.768, DSC: 0.801, mIoU2: 0.486, DSC2: 0.551
+val 11: mIoU: 0.750, DSC: 0.786, mIoU2: 0.476, DSC2: 0.543
+val 12: mIoU: 0.767, DSC: 0.801, mIoU2: 0.486, DSC2: 0.551
+val 13: mIoU: 0.763, DSC: 0.797, mIoU2: 0.481, DSC2: 0.547
+val 14: mIoU: 0.763, DSC: 0.796, mIoU2: 0.484, DSC2: 0.549
+val 15: mIoU: 0.750, DSC: 0.785, mIoU2: 0.459, DSC2: 0.528
+val 16: mIoU: 0.760, DSC: 0.794, mIoU2: 0.479, DSC2: 0.545
+val 17: mIoU: 0.759, DSC: 0.793, mIoU2: 0.475, DSC2: 0.542
+val 18: mIoU: 0.751, DSC: 0.786, mIoU2: 0.465, DSC2: 0.533
+val 19: mIoU: 0.751, DSC: 0.785, mIoU2: 0.460, DSC2: 0.528
+val 20: mIoU: 0.757, DSC: 0.792, mIoU2: 0.469, DSC2: 0.537
+test: mIoU: 0.748, DSC: 0.791, mIoU2: 0.492, DSC2: 0.557
+
+DiceLoss(weight=[1,1,2])
+val 1: mIoU: 0.623, DSC: 0.661, mIoU2: 0.478, DSC2: 0.566
+val 2: mIoU: 0.671, DSC: 0.707, mIoU2: 0.494, DSC2: 0.600
+val 3: mIoU: 0.669, DSC: 0.706, mIoU2: 0.467, DSC2: 0.554
+val 4: mIoU: 0.674, DSC: 0.711, mIoU2: 0.490, DSC2: 0.587
+val 5: mIoU: 0.676, DSC: 0.711, mIoU2: 0.493, DSC2: 0.606
+val 6: mIoU: 0.692, DSC: 0.727, mIoU2: 0.517, DSC2: 0.634
+val 7: mIoU: 0.701, DSC: 0.736, mIoU2: 0.522, DSC2: 0.635
+val 8: mIoU: 0.725, DSC: 0.759, mIoU2: 0.528, DSC2: 0.636
+val 9: mIoU: 0.687, DSC: 0.719, mIoU2: 0.500, DSC2: 0.613
+val 10: mIoU: 0.693, DSC: 0.727, mIoU2: 0.507, DSC2: 0.618
+val 11: mIoU: 0.699, DSC: 0.732, mIoU2: 0.526, DSC2: 0.640
+val 12: mIoU: 0.739, DSC: 0.775, mIoU2: 0.488, DSC2: 0.565
+val 13: mIoU: 0.751, DSC: 0.786, mIoU2: 0.482, DSC2: 0.548
+val 14: mIoU: 0.758, DSC: 0.793, mIoU2: 0.482, DSC2: 0.548
+val 15: mIoU: 0.744, DSC: 0.780, mIoU2: 0.461, DSC2: 0.529
+val 16: mIoU: 0.760, DSC: 0.794, mIoU2: 0.481, DSC2: 0.547
+val 17: mIoU: 0.743, DSC: 0.780, mIoU2: 0.458, DSC2: 0.526
+val 18: mIoU: 0.751, DSC: 0.787, mIoU2: 0.476, DSC2: 0.543
+val 19: mIoU: 0.746, DSC: 0.782, mIoU2: 0.456, DSC2: 0.525
+val 20: mIoU: 0.756, DSC: 0.791, mIoU2: 0.471, DSC2: 0.539
+test: mIoU: 0.719, DSC: 0.760, mIoU2: 0.514, DSC2: 0.601
+
+DFLoss(lamda=[1,3], weight=[1,1,2])
+val 1: mIoU: 0.738, DSC: 0.772, mIoU2: 0.489, DSC2: 0.563
+val 2: mIoU: 0.698, DSC: 0.730, mIoU2: 0.509, DSC2: 0.621
+val 3: mIoU: 0.715, DSC: 0.749, mIoU2: 0.543, DSC2: 0.656
+val 4: mIoU: 0.710, DSC: 0.742, mIoU2: 0.511, DSC2: 0.624
+val 5: mIoU: 0.731, DSC: 0.763, mIoU2: 0.541, DSC2: 0.653
+val 6: mIoU: 0.734, DSC: 0.766, mIoU2: 0.533, DSC2: 0.636
+val 7: mIoU: 0.756, DSC: 0.789, mIoU2: 0.536, DSC2: 0.635
+val 8: mIoU: 0.705, DSC: 0.737, mIoU2: 0.531, DSC2: 0.643
+val 9: mIoU: 0.738, DSC: 0.771, mIoU2: 0.539, DSC2: 0.642
+val 10: mIoU: 0.744, DSC: 0.777, mIoU2: 0.538, DSC2: 0.639
+val 11: mIoU: 0.740, DSC: 0.773, mIoU2: 0.538, DSC2: 0.643
+val 12: mIoU: 0.746, DSC: 0.779, mIoU2: 0.540, DSC2: 0.642
+val 13: mIoU: 0.747, DSC: 0.780, mIoU2: 0.517, DSC2: 0.613
+val 14: mIoU: 0.731, DSC: 0.764, mIoU2: 0.528, DSC2: 0.634
+val 15: mIoU: 0.732, DSC: 0.766, mIoU2: 0.541, DSC2: 0.650
+val 16: mIoU: 0.738, DSC: 0.771, mIoU2: 0.525, DSC2: 0.626
+val 17: mIoU: 0.741, DSC: 0.775, mIoU2: 0.543, DSC2: 0.651
+val 18: mIoU: 0.756, DSC: 0.790, mIoU2: 0.516, DSC2: 0.606
+val 19: mIoU: 0.734, DSC: 0.766, mIoU2: 0.546, DSC2: 0.656
+val 20: mIoU: 0.749, DSC: 0.782, mIoU2: 0.521, DSC2: 0.613
+test: mIoU: 0.720, DSC: 0.761, mIoU2: 0.515, DSC2: 0.604
+
+DiceLoss
+val 1: mIoU: 0.623, DSC: 0.670, mIoU2: 0.518, DSC2: 0.622
+val 2: mIoU: 0.621, DSC: 0.664, mIoU2: 0.526, DSC2: 0.638
+val 3: mIoU: 0.691, DSC: 0.737, mIoU2: 0.564, DSC2: 0.678
+val 4: mIoU: 0.679, DSC: 0.725, mIoU2: 0.557, DSC2: 0.671
+val 5: mIoU: 0.713, DSC: 0.758, mIoU2: 0.566, DSC2: 0.675
+val 6: mIoU: 0.697, DSC: 0.741, mIoU2: 0.567, DSC2: 0.677
+val 7: mIoU: 0.723, DSC: 0.767, mIoU2: 0.578, DSC2: 0.688
+val 8: mIoU: 0.721, DSC: 0.766, mIoU2: 0.571, DSC2: 0.678
+val 9: mIoU: 0.710, DSC: 0.755, mIoU2: 0.581, DSC2: 0.692
+val 10: mIoU: 0.729, DSC: 0.773, mIoU2: 0.584, DSC2: 0.695
+val 11: mIoU: 0.737, DSC: 0.781, mIoU2: 0.583, DSC2: 0.692
+val 12: mIoU: 0.717, DSC: 0.761, mIoU2: 0.588, DSC2: 0.703
+val 13: mIoU: 0.708, DSC: 0.752, mIoU2: 0.587, DSC2: 0.703
+val 14: mIoU: 0.714, DSC: 0.757, mIoU2: 0.593, DSC2: 0.708
+val 15: mIoU: 0.739, DSC: 0.783, mIoU2: 0.593, DSC2: 0.704
+val 16: mIoU: 0.743, DSC: 0.787, mIoU2: 0.586, DSC2: 0.694
+val 17: mIoU: 0.736, DSC: 0.781, mIoU2: 0.597, DSC2: 0.710
+val 18: mIoU: 0.737, DSC: 0.781, mIoU2: 0.597, DSC2: 0.710
+val 19: mIoU: 0.749, DSC: 0.793, mIoU2: 0.597, DSC2: 0.706
+val 20: mIoU: 0.741, DSC: 0.784, mIoU2: 0.603, DSC2: 0.714
+test: mIoU: 0.744, DSC: 0.787, mIoU2: 0.607, DSC2: 0.720
+
+DFLoss(lamda=[1,1])
+val 1: mIoU: 0.715, DSC: 0.761, mIoU2: 0.514, DSC2: 0.595
+val 2: mIoU: 0.682, DSC: 0.725, mIoU2: 0.566, DSC2: 0.682
+val 3: mIoU: 0.719, DSC: 0.763, mIoU2: 0.581, DSC2: 0.691
+val 4: mIoU: 0.720, DSC: 0.764, mIoU2: 0.596, DSC2: 0.708
+val 5: mIoU: 0.742, DSC: 0.786, mIoU2: 0.602, DSC2: 0.712
+val 6: mIoU: 0.747, DSC: 0.790, mIoU2: 0.613, DSC2: 0.725
+val 7: mIoU: 0.723, DSC: 0.767, mIoU2: 0.607, DSC2: 0.720
+val 8: mIoU: 0.728, DSC: 0.771, mIoU2: 0.624, DSC2: 0.741
+val 9: mIoU: 0.733, DSC: 0.776, mIoU2: 0.609, DSC2: 0.722
+val 10: mIoU: 0.734, DSC: 0.777, mIoU2: 0.604, DSC2: 0.716
+val 11: mIoU: 0.735, DSC: 0.779, mIoU2: 0.623, DSC2: 0.736
+val 12: mIoU: 0.742, DSC: 0.785, mIoU2: 0.621, DSC2: 0.734
+val 13: mIoU: 0.754, DSC: 0.798, mIoU2: 0.588, DSC2: 0.692
+val 14: mIoU: 0.748, DSC: 0.792, mIoU2: 0.619, DSC2: 0.731
+val 15: mIoU: 0.751, DSC: 0.794, mIoU2: 0.619, DSC2: 0.731
+val 16: mIoU: 0.756, DSC: 0.799, mIoU2: 0.615, DSC2: 0.724
+val 17: mIoU: 0.752, DSC: 0.795, mIoU2: 0.609, DSC2: 0.718
+val 18: mIoU: 0.743, DSC: 0.787, mIoU2: 0.605, DSC2: 0.716
+val 19: mIoU: 0.734, DSC: 0.778, mIoU2: 0.619, DSC2: 0.734
+val 20: mIoU: 0.750, DSC: 0.794, mIoU2: 0.615, DSC2: 0.727
+test: mIoU: 0.729, DSC: 0.771, mIoU2: 0.630, DSC2: 0.746
+
+val 1: mIoU: 0.694, DSC: 0.739, mIoU2: 0.506, DSC2: 0.580
+val 2: mIoU: 0.693, DSC: 0.737, mIoU2: 0.558, DSC2: 0.672
+val 3: mIoU: 0.718, DSC: 0.765, mIoU2: 0.529, DSC2: 0.630
+val 4: mIoU: 0.674, DSC: 0.715, mIoU2: 0.547, DSC2: 0.666
+val 5: mIoU: 0.733, DSC: 0.777, mIoU2: 0.606, DSC2: 0.720
+val 6: mIoU: 0.744, DSC: 0.790, mIoU2: 0.600, DSC2: 0.711
+val 7: mIoU: 0.738, DSC: 0.782, mIoU2: 0.620, DSC2: 0.733
+val 8: mIoU: 0.731, DSC: 0.775, mIoU2: 0.619, DSC2: 0.733
+val 9: mIoU: 0.733, DSC: 0.778, mIoU2: 0.611, DSC2: 0.724
+val 10: mIoU: 0.706, DSC: 0.749, mIoU2: 0.589, DSC2: 0.706
+val 11: mIoU: 0.747, DSC: 0.791, mIoU2: 0.618, DSC2: 0.731
+val 12: mIoU: 0.754, DSC: 0.799, mIoU2: 0.605, DSC2: 0.716
+val 13: mIoU: 0.722, DSC: 0.766, mIoU2: 0.603, DSC2: 0.715
+val 14: mIoU: 0.740, DSC: 0.784, mIoU2: 0.625, DSC2: 0.738
+val 15: mIoU: 0.755, DSC: 0.800, mIoU2: 0.592, DSC2: 0.697
+val 16: mIoU: 0.733, DSC: 0.777, mIoU2: 0.627, DSC2: 0.742
+val 17: mIoU: 0.731, DSC: 0.776, mIoU2: 0.621, DSC2: 0.736
+val 18: mIoU: 0.734, DSC: 0.778, mIoU2: 0.620, DSC2: 0.733
+val 19: mIoU: 0.737, DSC: 0.781, mIoU2: 0.622, DSC2: 0.734
+val 20: mIoU: 0.743, DSC: 0.787, mIoU2: 0.624, DSC2: 0.736
+val 21: mIoU: 0.746, DSC: 0.791, mIoU2: 0.617, DSC2: 0.730
+val 22: mIoU: 0.712, DSC: 0.756, mIoU2: 0.621, DSC2: 0.739
+val 23: mIoU: 0.747, DSC: 0.791, mIoU2: 0.617, DSC2: 0.728
+val 24: mIoU: 0.742, DSC: 0.788, mIoU2: 0.616, DSC2: 0.730
+val 25: mIoU: 0.744, DSC: 0.789, mIoU2: 0.624, DSC2: 0.736
+val 26: mIoU: 0.744, DSC: 0.789, mIoU2: 0.618, DSC2: 0.729
+val 27: mIoU: 0.748, DSC: 0.792, mIoU2: 0.611, DSC2: 0.721
+val 28: mIoU: 0.738, DSC: 0.782, mIoU2: 0.625, DSC2: 0.739
+val 29: mIoU: 0.745, DSC: 0.790, mIoU2: 0.619, DSC2: 0.731
+val 30: mIoU: 0.744, DSC: 0.789, mIoU2: 0.621, DSC2: 0.733
+test: mIoU: 0.736, DSC: 0.778, mIoU2: 0.640, DSC2: 0.755
+
+DFLoss(lamda=[1,3])
+val 1: mIoU: 0.796, DSC: 0.848, mIoU2: 0.813, DSC2: 0.892
+val 2: mIoU: 0.809, DSC: 0.859, mIoU2: 0.822, DSC2: 0.898
+val 3: mIoU: 0.809, DSC: 0.860, mIoU2: 0.812, DSC2: 0.891
+val 4: mIoU: 0.821, DSC: 0.871, mIoU2: 0.829, DSC2: 0.902
+val 5: mIoU: 0.819, DSC: 0.868, mIoU2: 0.832, DSC2: 0.905
+val 6: mIoU: 0.823, DSC: 0.872, mIoU2: 0.833, DSC2: 0.905
+val 7: mIoU: 0.816, DSC: 0.865, mIoU2: 0.837, DSC2: 0.908
+val 8: mIoU: 0.825, DSC: 0.873, mIoU2: 0.840, DSC2: 0.910
+val 9: mIoU: 0.819, DSC: 0.868, mIoU2: 0.841, DSC2: 0.910
+val 10: mIoU: 0.826, DSC: 0.874, mIoU2: 0.839, DSC2: 0.909
+val 11: mIoU: 0.822, DSC: 0.871, mIoU2: 0.838, DSC2: 0.909
+val 12: mIoU: 0.822, DSC: 0.871, mIoU2: 0.840, DSC2: 0.910
+val 13: mIoU: 0.828, DSC: 0.877, mIoU2: 0.836, DSC2: 0.907
+val 14: mIoU: 0.825, DSC: 0.874, mIoU2: 0.839, DSC2: 0.909
+val 15: mIoU: 0.818, DSC: 0.867, mIoU2: 0.839, DSC2: 0.909
+val 16: mIoU: 0.820, DSC: 0.869, mIoU2: 0.839, DSC2: 0.909
+val 17: mIoU: 0.823, DSC: 0.872, mIoU2: 0.839, DSC2: 0.909
+val 18: mIoU: 0.824, DSC: 0.872, mIoU2: 0.841, DSC2: 0.910
+val 19: mIoU: 0.821, DSC: 0.870, mIoU2: 0.841, DSC2: 0.910
+val 20: mIoU: 0.821, DSC: 0.870, mIoU2: 0.835, DSC2: 0.906
+val 21: mIoU: 0.821, DSC: 0.870, mIoU2: 0.839, DSC2: 0.909
+val 22: mIoU: 0.823, DSC: 0.872, mIoU2: 0.841, DSC2: 0.910
+val 23: mIoU: 0.820, DSC: 0.869, mIoU2: 0.839, DSC2: 0.909
+val 24: mIoU: 0.823, DSC: 0.871, mIoU2: 0.841, DSC2: 0.911
+val 25: mIoU: 0.820, DSC: 0.869, mIoU2: 0.838, DSC2: 0.908
+val 26: mIoU: 0.821, DSC: 0.870, mIoU2: 0.840, DSC2: 0.910
+val 27: mIoU: 0.821, DSC: 0.869, mIoU2: 0.839, DSC2: 0.909
+val 28: mIoU: 0.821, DSC: 0.870, mIoU2: 0.839, DSC2: 0.909
+val 29: mIoU: 0.819, DSC: 0.868, mIoU2: 0.840, DSC2: 0.910
+val 30: mIoU: 0.818, DSC: 0.867, mIoU2: 0.840, DSC2: 0.910
+test: mIoU: 0.824, DSC: 0.871, mIoU2: 0.843, DSC2: 0.912
+

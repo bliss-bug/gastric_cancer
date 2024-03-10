@@ -1,0 +1,7 @@
+train: dataset/train.txt
+val: dataset/val.txt
+test: dataset/test.txt
+
+nc: 1
+
+names: ['cancer']
