@@ -4,7 +4,6 @@ from ultralytics import YOLO
 
 
 def main(args):
-    device = torch.device(args.device if torch.cuda.is_available() else 'cpu')
     model = YOLO("yolov8n.pt")
 
     model.train(data="data.yaml", epochs=args.epochs, imgsz=args.image_size, 
