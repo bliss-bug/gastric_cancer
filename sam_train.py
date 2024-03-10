@@ -92,7 +92,7 @@ def main(args):
 
     # train
     model = GasSAM(sam_model).to(device)
-    #model.load_state_dict(torch.load('../weight/sam_vit_b.pth'))
+    #model.load_state_dict(torch.load('weight/sam_vit_b.pth'))
     optimizer = optim.AdamW(model.sam_model.mask_decoder.parameters(), lr=args.lr, weight_decay=2e-4)
     model = nn.DataParallel(model, device_ids=args.device_ids)
 
@@ -108,7 +108,7 @@ def main(args):
         miou, dsc = val(val_loader, model, args.num_classes, device)
         if miou > miou_max:
             miou_max = miou
-            torch.save(model.module.state_dict(), "../weight/sam_vit_b.pth")
+            torch.save(model.module.state_dict(), "weight/sam_vit_b.pth")
 
         print('val {}: mIoU: {:.3f}, DSC: {:.3f}\n'.format(epoch+1, miou, dsc))
         with open('outcome/sam_vit_b.log', 'a') as file:
@@ -116,7 +116,7 @@ def main(args):
 
     # test
     model = GasSAM(sam_model).to(device)
-    model.load_state_dict(torch.load('../weight/sam_vit_b.pth'))
+    model.load_state_dict(torch.load('weight/sam_vit_b.pth'))
     model = nn.DataParallel(model, device_ids=args.device_ids)
 
     miou_test, dsc_test = val(test_loader, model, args.num_classes, device)

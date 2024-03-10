@@ -52,7 +52,7 @@ def main(args):
         miou, dsc, miou2, dsc2 = val_one_epoch(model, val_loader, device, args.model, args.num_classes)
 
         if miou2 > miou_max:
-            torch.save(model.module.state_dict(), "../weight/{}.pth".format(args.model))
+            torch.save(model.module.state_dict(), "weight/{}.pth".format(args.model))
             miou_max = miou2
 
         print('val {}: mIoU: {:.3f}, DSC: {:.3f}, mIoU2: {:.3f}, DSC2: {:.3f}\n'.format(i+1, miou, dsc, miou2, dsc2))
@@ -65,7 +65,7 @@ def main(args):
     elif args.model == 'ResUNet':
         model = ResUNet(in_ch=3, n_class=args.num_classes).to(device)
         
-    model.load_state_dict(torch.load("../weight/{}.pth".format(args.model)))
+    model.load_state_dict(torch.load("weight/{}.pth".format(args.model)))
     model = nn.DataParallel(model, device_ids=args.device_ids)
 
     miou_test, dsc_test, miou2_test, dsc2_test = val_one_epoch(model, test_loader, device, args.model, args.num_classes)
