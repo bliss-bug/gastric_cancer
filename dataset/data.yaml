@@ -1,6 +1,7 @@
-train: /home/zhujh/gastric_cancer/dataset/train.txt
-val: /home/zhujh/gastric_cancer/dataset/val.txt
-test: /home/zhujh/gastric_cancer/dataset/test.txt
+path: /home/zhujh/gastric_cancer/dataset
+train: train.txt
+val: val.txt
+test: test.txt
 
 nc: 1
 
