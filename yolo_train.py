@@ -7,8 +7,8 @@ def main(args):
     model = YOLO(args.weight_path)
 
     results = model.train(data="dataset/data.yaml", epochs=args.epochs, imgsz=args.image_size, 
-                device=args.device_ids, batch=args.batch_size, optimizer='Adam',
-                cache=True)  # train the model
+                device=args.device_ids, batch=args.batch_size, optimizer='Adam')  # train the model
+    print(results)
     #metrics = model.val()
 
 
