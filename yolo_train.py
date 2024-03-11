@@ -4,10 +4,10 @@ from ultralytics import YOLO
 
 
 def main(args):
-    model = YOLO("yolov8n.pt")
+    model = YOLO(args.weight_path)
 
-    results = model.train(data="data.yaml", epochs=args.epochs, imgsz=args.image_size, 
-                device=args.device_ids, batch=args.batch_size, optimizer='AdamW',
+    results = model.train(data="dataset/data.yaml", epochs=args.epochs, imgsz=args.image_size, 
+                device=args.device_ids, batch=args.batch_size, optimizer='Adam',
                 cache=True)  # train the model
     #metrics = model.val()
 
@@ -21,6 +21,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--device_ids', nargs='+', type=int, default=[0,1])
     parser.add_argument('--image_size', type=int, default=512)
+    parser.add_argument('--weight_path', type=str, default='yolov8n.pt')
 
     args = parser.parse_args()
 
