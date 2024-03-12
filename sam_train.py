@@ -10,6 +10,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 
 from segment_anything import sam_model_registry
+from ultralytics import YOLO
 
 from utils import load_data
 from dataset import SamDataset
@@ -17,12 +18,12 @@ from loss import DFLoss, DFLoss2
 from model import GasSAM
 
 
-def train(data_loader, model: nn.DataParallel, optimizer, loss_fn, device):
+def train(data_loader, model: nn.DataParallel, yolo_model, optimizer, loss_fn, device):
     model.train()
     losses, cnt = 0., 0
     
     data_loader = tqdm(data_loader, file=sys.stdout)
-    for images, labels, boxes, _ in data_loader:
+    for images, labels, boxes, paths in data_loader:
         optimizer.zero_grad()
         images, labels, boxes = images.to(device), labels.long().to(device), boxes.to(device)  # [N, 3, H, W], [N, H, W], [N, 4]
         N = images.shape[0]
@@ -38,13 +39,13 @@ def train(data_loader, model: nn.DataParallel, optimizer, loss_fn, device):
 
 
 
-def val(data_loader, model: nn.DataParallel, n_classes, device):
+def val(data_loader, model: nn.DataParallel, yolo_model, n_classes, device):
     model.eval()
     cm = torch.zeros((n_classes, n_classes), dtype=torch.float64).to(device)
     
     with torch.no_grad():
         data_loader = tqdm(data_loader, file=sys.stdout)
-        for images, labels, boxes, _ in data_loader:
+        for images, labels, boxes, path in data_loader:
             images, labels, boxes = images.to(device), labels.to(device).long(), boxes.to(device)
             pred_masks = model(images, boxes) # [B, 1, H, W]
 
@@ -80,6 +81,8 @@ def main(args):
     
     test_loader = DataLoader(test_dataset, batch_size=args.batch_size,
                              shuffle=False, num_workers=8, pin_memory=True)
+    
+    yolo_model = YOLO(args.yolo_weight_path)
 
     sam_model = sam_model_registry['vit_b'](checkpoint=None, image_size=args.image_size).to(device)
     pretrained_state_dict = torch.load(args.weight_path)
@@ -96,16 +99,16 @@ def main(args):
     optimizer = optim.AdamW(model.sam_model.mask_decoder.parameters(), lr=args.lr, weight_decay=2e-4)
     model = nn.DataParallel(model, device_ids=args.device_ids)
 
-    loss_fn = DFLoss2([1,3])
+    loss_fn = DFLoss2([1,3]).to(device)
 
     miou_max = 0
     for epoch in range(args.epochs):
-        loss = train(train_loader, model, optimizer, loss_fn, device)
+        loss = train(train_loader, model, yolo_model, optimizer, loss_fn, device)
         print('train {}: loss: {:.3f}\n'.format(epoch+1, loss))
         with open('outcome/sam_vit_b.log', 'a') as file:
             file.write('train {}: loss: {:.3f}\n'.format(epoch+1, loss))
 
-        miou, dsc = val(val_loader, model, args.num_classes, device)
+        miou, dsc = val(val_loader, model, yolo_model, args.num_classes, device)
         if miou > miou_max:
             miou_max = miou
             torch.save(model.module.state_dict(), "weight/sam_vit_b.pth")
@@ -114,12 +117,13 @@ def main(args):
         with open('outcome/sam_vit_b.log', 'a') as file:
             file.write('val {}: mIoU: {:.3f}, DSC: {:.3f}\n'.format(epoch+1, miou, dsc))
 
+
     # test
     model = GasSAM(sam_model).to(device)
     model.load_state_dict(torch.load('weight/sam_vit_b.pth'))
     model = nn.DataParallel(model, device_ids=args.device_ids)
 
-    miou_test, dsc_test = val(test_loader, model, args.num_classes, device)
+    miou_test, dsc_test = val(test_loader, model, yolo_model, args.num_classes, device)
 
     print('test: mIoU: {:.3f}, DSC: {:.3f}\n'.format(miou_test, dsc_test))
     with open('outcome/sam_vit_b.log', 'a') as file:
@@ -140,6 +144,7 @@ if __name__ == '__main__':
     parser.add_argument('--image_size', type=int, default=512, help="target input image size")
     parser.add_argument('--paths', type=list, default=['/data/ssd/zhujh/gastric/first/', '/data/ssd/zhujh/gastric/second/'])
     parser.add_argument('--weight_path', type=str, default='/data/ssd/zhujh/sam_vit_b_01ec64.pth')
+    parser.add_argument('--yolo_weight_path', type=str, default='runs/detect/train4/weights/best.pt')
 
     args = parser.parse_args()
 
