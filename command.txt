@@ -1,2 +1,3 @@
 nohup python sam_train.py --device='cuda:0' --device_ids 0 1 --epochs=40 --batch_size=64 --lr=5e-5 &
 python sam_train.py --device='cuda:0' --device_ids 0 1 --epochs=40 --batch_size=64 --lr=5e-5
+nohup python yolo_train.py --device_ids=2 --weight_path='yolov8s.pt' &

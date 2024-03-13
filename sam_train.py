@@ -23,7 +23,12 @@ def train(data_loader, model: nn.DataParallel, yolo_model, optimizer, loss_fn, d
     losses, cnt = 0., 0
     
     data_loader = tqdm(data_loader, file=sys.stdout)
-    for images, labels, boxes, paths in data_loader:
+    for images, labels, _, paths in data_loader:
+        with torch.no_grad():
+            results = yolo_model(paths)
+            boxes = []
+            for result in results:
+                b = result.boxes.xywhn
         optimizer.zero_grad()
         images, labels, boxes = images.to(device), labels.long().to(device), boxes.to(device)  # [N, 3, H, W], [N, H, W], [N, 4]
         N = images.shape[0]
@@ -144,7 +149,7 @@ if __name__ == '__main__':
     parser.add_argument('--image_size', type=int, default=512, help="target input image size")
     parser.add_argument('--paths', type=list, default=['/data/ssd/zhujh/gastric/first/', '/data/ssd/zhujh/gastric/second/'])
     parser.add_argument('--weight_path', type=str, default='/data/ssd/zhujh/sam_vit_b_01ec64.pth')
-    parser.add_argument('--yolo_weight_path', type=str, default='runs/detect/train4/weights/best.pt')
+    parser.add_argument('--yolo_weight_path', type=str, default='runs/detect/train/weights/best.pt')
 
     args = parser.parse_args()
 
